@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CategoriaDoEventoDTO {
 
-    private Long id;
+    private Long categoriaId;
 
     @NotBlank(message = "O nome da categoria é obrigatório")
     @Size(min = 3, max = 50, message = "O nome deve ter entre 3 e 50 caracteres")
-    private String nome;
+    private String categoriaNome;
 }

@@ -6,4 +6,8 @@ import com.plataforma.eventos.model.CategoriaDoEvento;
 
 public interface CategoriaDoEventoRepository extends JpaRepository<CategoriaDoEvento, Long> {
 
+    boolean existsByNomeIgnoreCase(String nome);
+
+    CategoriaDoEvento findByNome(String nome);
+
 }
