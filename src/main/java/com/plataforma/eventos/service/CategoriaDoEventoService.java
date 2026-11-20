@@ -76,7 +76,7 @@ public class CategoriaDoEventoService {
 
     public CategoriaDoEventoDTO deleteCategoria(Long categoriaId) {
         CategoriaDoEvento categoriaDoEvento = categoriaDoEventoRepository.findById(categoriaId)
-                .orElseThrow(() -> new ResourceNotFoundException("categoria não encontrada" + categoriaId));
+                .orElseThrow(() -> new ResourceNotFoundException("categoria não encontrada " + categoriaId));
         categoriaDoEventoRepository.delete(categoriaDoEvento);
         return new CategoriaDoEventoDTO(categoriaDoEvento.getId(), categoriaDoEvento.getNome());
     }
